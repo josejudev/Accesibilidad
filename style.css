@@ -1,3 +1,6 @@
+:root {
+    --font-size: 1;
+  }
 .card{
 
     width: 50%;       
@@ -18,4 +21,12 @@ button{
 p{
     text-align:justify;
     font-size:15px;
+    font-size: calc(var(--font-size) * 1em);
 }
+
+
+/*Downloaded from https://www.codeseek.co/AlvaroFelipe/aumentar-y-disminuir-tamaandxf1o-de-fuente-con-javascript-wjvwww */
+
+  
+
+  

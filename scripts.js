@@ -18,5 +18,7 @@ var getFontSize = function getFontSize() {
     });
   };
   
+
+
   fontUp(document.getElementById('font-up'));
   fontDown(document.getElementById('font-down'));

@@ -1,24 +1,22 @@
 
-/*Downloaded from https://www.codeseek.co/AlvaroFelipe/aumentar-y-disminuir-tamaandxf1o-de-fuente-con-javascript-wjvwww */
-var getFontSize = function getFontSize() {
-    return parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--font-size'));
-  };
-  
-  var fontUp = function fontUp(element) {
-    element.addEventListener('click', function () {
-      var fontSize = getFontSize();
-      document.documentElement.style.setProperty('--font-size', '' + fontSize * 1.1);
-    });
-  };
-  
-  var fontDown = function fontDown(element) {
-    element.addEventListener('click', function () {
-      var fontSize = getFontSize();
-      document.documentElement.style.setProperty('--font-size', '' + fontSize * 0.9);
-    });
-  };
-  
+var zoom=1;
+ 
+document.getElementById("font-up").addEventListener("click",function(e){
+if(zoom<=1.55){
+    zoom+=.30;
+    resize();
+}
+});
+document.getElementById("font-down").addEventListener("click",function(e){
+    if(zoom>1) {
+        zoom-=.10;
+        resize();
+    }
+});
+ 
+function resize() {
+    document.getElementById("text").style.zoom=zoom;
+    document.getElementById("value").innerHTML="x"+zoom.toFixed(2);
+}
 
 
-  fontUp(document.getElementById('font-up'));
-  fontDown(document.getElementById('font-down'));

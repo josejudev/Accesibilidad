@@ -1,6 +1,4 @@
-:root {
-    --font-size: 1;
-  }
+
 .card{
 
     width: 50%;       
@@ -21,7 +19,7 @@ button{
 p{
     text-align:justify;
     font-size:15px;
-    font-size: calc(var(--font-size) * 1em);
+
 
 
 

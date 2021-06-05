@@ -4,7 +4,7 @@ var zoom=1;
 
 document.getElementById("font-up").addEventListener("click",function(e){
 if(zoom<=1.55){
-    zoom+=.30;
+    zoom+=.05;
     resize();
 }
 });

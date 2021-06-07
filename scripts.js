@@ -16,15 +16,15 @@ document.getElementById("font-down").addEventListener("click", function (e) {
 
 function resize() {
   document.getElementById("text").style.zoom = zoom;
-  document.getElementById("value").innerHTML = "x" + zoom.toFixed(2);
+
 }
 
 //Cambiar a filtro blanco y negro
 
 document
-  .getElementById("btn-check-2-outlined")
+  .getElementById("btn-byn")
   .addEventListener("click", function (e) {
-    if (document.getElementById("btn-check-2-outlined").checked) {
+    if (document.getElementById("btn-byn").checked) {
       document.getElementById("imagen-A").style.filter = "grayscale(100%)";
       document.getElementById("cuerpo").style.filter = "grayscale(100%)";
     } else {
@@ -32,3 +32,39 @@ document
       document.getElementById("cuerpo").style.filter = "none";
     }
   });
+
+//Resaltar Links
+document
+  .getElementById("btn-resalt")
+  .addEventListener("click", function (e) {
+    if (document.getElementById("btn-resalt").checked) {
+      document.getElementById("link-ref").style.textDecoration = "underline 2px";
+      document.getElementById("link-ref").style.fontWeight = "bolder";
+      
+
+    } else {
+      document.getElementById("link-ref").style.textDecoration = "none";
+      document.getElementById("link-ref").style.fontWeight = "normal";
+
+    }
+  });
+
+//Restablecer cambios
+document.getElementById("btn-reload").addEventListener("click", function (e) {
+
+  document.getElementById("link-ref").style.textDecoration = "none";
+  document.getElementById("link-ref").style.fontWeight = "normal";
+  document.getElementById("imagen-A").style.filter = "none";
+  document.getElementById("cuerpo").style.filter = "none";
+  if(document.getElementById("btn-resalt").checked){
+    document.getElementById('btn-resalt').checked = false;
+    document.getElementById('btn-byn').checked = false;
+    
+
+  }
+
+
+});
+
+
+

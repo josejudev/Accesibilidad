@@ -21,11 +21,10 @@ button{
 p{
     text-align:justify;
     font-size:15px;
+}
 
-
-
-
-    
+.btn-outline-danger{
+    margin: 10px;
 }
 .imagen{
 
@@ -34,6 +33,7 @@ p{
     width:30%;
     height:30%;
     margin-left: 30px;
+
 
 }
 

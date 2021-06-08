@@ -52,7 +52,7 @@ p{
 .redes a, .btn-mas label{
     display: block;
     text-decoration: none;
-    background: #089c21;
+    background: #55cf6a;
     color: #fff;
     width: 55px;
     height: 55px;
@@ -78,11 +78,11 @@ p{
 }
 .btn-mas label{
     cursor: pointer;
-    background:  #600694;
+    background:  #6b026e;
     font-size: 23px;
 }
 #btn-mas:checked ~ .btn-mas label{
-    transform: rotate(135deg);
+    transform: rotate(45deg);
     font-size: 25px;
 }
 

@@ -16,9 +16,24 @@ document.getElementById("font-down").addEventListener("click", function (e) {
 
 function resize() {
   document.getElementById("text").style.zoom = zoom;
+  document.getElementById("holis").style.zoom = zoom;
 }
 
+let y = 1;
+let x;
+//nuevo blanco y negro
+document.getElementById("btn-byno").addEventListener("click", function (e) {
+ y +=1
+ x= y% 2;
+if(x==0){
+  document.getElementById("imagen-A").style.filter = "grayscale(100%)";
+  document.getElementById("cuerpo").style.filter = "grayscale(100%)";
+  document.getElementById("link-ref").style.filter = "grayscale(100%)";
+} else {
+  blancoNegro();
+}
 
+});
 
 
 
@@ -29,9 +44,7 @@ document.getElementById("btn-byn").addEventListener("click", function (e) {
     document.getElementById("cuerpo").style.filter = "grayscale(100%)";
     document.getElementById("link-ref").style.filter = "grayscale(100%)";
   } else {
-    document.getElementById("imagen-A").style.filter = "none";
-    document.getElementById("cuerpo").style.filter = "none";
-    document.getElementById("link-ref").style.filter = "none";
+    blancoNegro();
   }
 });
 
@@ -73,6 +86,7 @@ document.getElementById("btn-reload").addEventListener("click", function (e) {
   zoom = 1;
   document.getElementById("link-ref").style.filter = "none";
   document.getElementById("text").style.zoom = zoom;
+  document.getElementById("holis").style.zoom = zoom;
   document.getElementById("link-ref").style.textDecoration = "none";
   document.getElementById("link-ref").style.fontWeight = "normal";
   document.getElementById("imagen-A").style.filter = "none";
@@ -89,3 +103,9 @@ document.getElementById("btn-reload").addEventListener("click", function (e) {
 
 
 });
+
+function blancoNegro(){
+  document.getElementById("imagen-A").style.filter = "none";
+  document.getElementById("cuerpo").style.filter = "none";
+  document.getElementById("link-ref").style.filter = "none";
+}

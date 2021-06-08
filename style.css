@@ -1,15 +1,9 @@
+.card {
 
-
-
-
-
-
-.card{
-
-    width: 50%;       
+    width: 50%;
     height: 50%;
-    margin:auto;
-    margin-top:10%;
+    margin: auto;
+    margin-top: 10%;
     /* filter: grayscale(100%); */
 }
 
@@ -18,38 +12,43 @@
     justify-content: center;
     align-items: center;
 }
-button{
-    margin:10px;
+
+button {
+    margin: 10px;
 
 }
 
-p{
-    text-align:justify;
-    font-size:15px;
+p {
+    text-align: justify;
+    font-size: 15px;
 }
 
-.btn-outline-danger{
+.btn-outline-danger {
     margin: 10px;
 }
-.imagen{
+
+.imagen {
 
     justify-content: center;
     align-items: center;
-    width:30%;
-    height:30%;
+    width: 30%;
+    height: 30%;
     margin-left: 30px;
 
 
 }
 
-#btn-mas{
+#btn-mas {
     display: none;
 }
-.container{
+
+.container {
     position: fixed;
 
 }
-.redes a, .btn-mas label{
+
+.botones a,
+.btn-mas label {
     display: block;
     text-decoration: none;
     background: #55cf6a;
@@ -59,38 +58,36 @@ p{
     line-height: 55px;
     text-align: center;
     border-radius: 50%;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
-    transition: all 500ms ease; 
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 500ms ease;
 }
-.redes a:hover{
+
+.botones a:hover {
     background: #fff;
     color: #3bf864;
 }
-.redes a{
+
+.botones a {
     margin-bottom: -15px;
     opacity: 0;
     visibility: hidden;
 }
-#btn-mas:checked~ .redes a{
+
+#btn-mas:checked~.botones a {
     margin-bottom: 8px;
     opacity: 1;
     visibility: visible;
 }
-.btn-mas label{
+
+.btn-mas label {
     cursor: pointer;
-    background:  #6b026e;
+    background: #6b026e;
     font-size: 23px;
 }
-#btn-mas:checked ~ .btn-mas label{
+
+#btn-mas:checked~.btn-mas label {
 
     /* transform: rotate(360deg); */
     font-size: 2em;
 
 }
-
-
-
-
-
-
-  

@@ -33,16 +33,7 @@ document.getElementById("btn-byno").addEventListener("click", function (e) {
   }
 });
 
-// Cambiar a filtro blanco y negro
-// document.getElementById("btn-byn").addEventListener("click", function (e) {
-//   if (document.getElementById("btn-byn").checked) {
-//     document.getElementById("imagen-A").style.filter = "grayscale(100%)";
-//     document.getElementById("cuerpo").style.filter = "grayscale(100%)";
-//     document.getElementById("link-ref").style.filter = "grayscale(100%)";
-//   } else {
-//     blancoNegro();
-//   }
-// });
+
 
 // nuevo Resaltar Links
 document.getElementById("btn-resalt").addEventListener("click", function (e) {
@@ -58,16 +49,7 @@ document.getElementById("btn-resalt").addEventListener("click", function (e) {
   }
 });
 
-//Resaltar Links
-// document.getElementById("btn-resalt").addEventListener("click", function (e) {
-//   if (document.getElementById("btn-resalt").checked) {
-//     document.getElementById("link-ref").style.textDecoration = "underline 2px";
-//     document.getElementById("link-ref").style.fontWeight = "bolder";
-//   } else {
-//     document.getElementById("link-ref").style.textDecoration = "none";
-//     document.getElementById("link-ref").style.fontWeight = "normal";
-//   }
-// });
+
 
 // nuevo Contraste alto
 document.getElementById("btn-contra").addEventListener("click", function (e) {
@@ -81,22 +63,7 @@ document.getElementById("btn-contra").addEventListener("click", function (e) {
   }
 });
 
-//contraste alto
-// document.getElementById("btn-contra").addEventListener("click", function (e) {
-//   if (document.getElementById("btn-contra").checked) {
-//     document.getElementById("link-ref").style.color = "yellow";
-//     document.getElementById("text").style.color = "yellow";
-//     document.body.style.backgroundColor = "#0D1117";
-//     document.getElementById("cuerpo").style.backgroundColor = "#0D1117";
-//     document.getElementById("text-contra").style.backgroundColor = "#0D1117";
-//   } else {
-//     document.getElementById("link-ref").style.color = "black";
-//     document.getElementById("text").style.color = "black";
-//     document.body.style.backgroundColor = "white";
-//     document.getElementById("cuerpo").style.backgroundColor = "white";
-//     document.getElementById("text-contra").style.backgroundColor = "white";
-//   }
-// });
+
 
 //Restablecer cambios
 document.getElementById("btn-reload").addEventListener("click", function (e) {

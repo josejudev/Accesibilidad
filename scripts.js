@@ -18,6 +18,10 @@ function resize() {
   document.getElementById("text").style.zoom = zoom;
 }
 
+
+
+
+
 //Cambiar a filtro blanco y negro
 document.getElementById("btn-byn").addEventListener("click", function (e) {
   if (document.getElementById("btn-byn").checked) {

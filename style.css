@@ -82,7 +82,7 @@ p{
     font-size: 23px;
 }
 #btn-mas:checked ~ .btn-mas label{
-    transform: rotate(140deg);
+    transform: rotate(130deg);
     font-size: 25px;
 }
 

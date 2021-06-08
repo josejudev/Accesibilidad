@@ -91,14 +91,24 @@ document.getElementById("btn-reload").addEventListener("click", function (e) {
   document.getElementById("link-ref").style.fontWeight = "normal";
   document.getElementById("imagen-A").style.filter = "none";
   document.getElementById("cuerpo").style.filter = "none";
+
+  document.getElementById("link-ref").style.color = "";
+  document.getElementById("text").style.color = "";
+  document.getElementById("cuerpo").style.backgroundColor = "";
+  document.getElementById("text-contra").style.backgroundColor = "";
+  document.body.style.backgroundColor = "";
   
+
   if (document.getElementById("btn-resalt").checked) {
     document.getElementById("btn-resalt").checked = false;
     document.getElementById("btn-byn").checked = false;
-    document.getElementById("link-ref").style.filter = "none";
+
+    document.getElementById("btn-contra").checked = false;
+
   } else {
     document.getElementById("btn-resalt").checked = false;
     document.getElementById("btn-byn").checked = false;
+    document.getElementById("btn-contra").checked = false;
   }
 
 

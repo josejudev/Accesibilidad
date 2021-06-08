@@ -23,99 +23,129 @@ let y = 1;
 let x;
 //nuevo blanco y negro
 document.getElementById("btn-byno").addEventListener("click", function (e) {
- y +=1
- x= y% 2;
-if(x==0){
-  document.getElementById("imagen-A").style.filter = "grayscale(100%)";
-  document.getElementById("cuerpo").style.filter = "grayscale(100%)";
-  document.getElementById("link-ref").style.filter = "grayscale(100%)";
-} else {
-  blancoNegro();
-}
-
+  y += 1;
+  x = y % 2;
+  if (x == 0) {
+    blancoNegro();
+  } else {
+    noByN();
+    y = 1;
+  }
 });
 
+// Cambiar a filtro blanco y negro
+// document.getElementById("btn-byn").addEventListener("click", function (e) {
+//   if (document.getElementById("btn-byn").checked) {
+//     document.getElementById("imagen-A").style.filter = "grayscale(100%)";
+//     document.getElementById("cuerpo").style.filter = "grayscale(100%)";
+//     document.getElementById("link-ref").style.filter = "grayscale(100%)";
+//   } else {
+//     blancoNegro();
+//   }
+// });
 
-
-//Cambiar a filtro blanco y negro
-document.getElementById("btn-byn").addEventListener("click", function (e) {
-  if (document.getElementById("btn-byn").checked) {
-    document.getElementById("imagen-A").style.filter = "grayscale(100%)";
-    document.getElementById("cuerpo").style.filter = "grayscale(100%)";
-    document.getElementById("link-ref").style.filter = "grayscale(100%)";
+// nuevo Resaltar Links
+document.getElementById("btn-resalt").addEventListener("click", function (e) {
+  y += 1;
+  x = y % 2;
+  if (x == 0) {
+    underline();
   } else {
-    blancoNegro();
+    noUnderline();
+    document.getElementById("link-ref").style.textDecoration = "none";
+    document.getElementById("link-ref").style.fontWeight = "normal";
+    y = 1;
   }
 });
 
 //Resaltar Links
-document.getElementById("btn-resalt").addEventListener("click", function (e) {
-  if (document.getElementById("btn-resalt").checked) {
-    document.getElementById("link-ref").style.textDecoration = "underline 2px";
-    document.getElementById("link-ref").style.fontWeight = "bolder";
+// document.getElementById("btn-resalt").addEventListener("click", function (e) {
+//   if (document.getElementById("btn-resalt").checked) {
+//     document.getElementById("link-ref").style.textDecoration = "underline 2px";
+//     document.getElementById("link-ref").style.fontWeight = "bolder";
+//   } else {
+//     document.getElementById("link-ref").style.textDecoration = "none";
+//     document.getElementById("link-ref").style.fontWeight = "normal";
+//   }
+// });
+
+// nuevo Contraste alto
+document.getElementById("btn-contra").addEventListener("click", function (e) {
+  y += 1;
+  x = y % 2;
+  if (x == 0) {
+    contrast();
   } else {
-    document.getElementById("link-ref").style.textDecoration = "none";
-    document.getElementById("link-ref").style.fontWeight = "normal";
+    noContrast();
+    y = 1;
   }
 });
 
 //contraste alto
-document.getElementById("btn-contra").addEventListener("click", function (e) {
-  if (document.getElementById("btn-contra").checked) {
-    document.getElementById("link-ref").style.color = "yellow";
-    document.getElementById("text").style.color = "yellow";
-    document.body.style.backgroundColor = "#0D1117";
-    document.getElementById("cuerpo").style.backgroundColor = "#0D1117";
-    document.getElementById("text-contra").style.backgroundColor = "#0D1117";
-    
-  } else {
-    document.getElementById("link-ref").style.color = "black";
-    document.getElementById("text").style.color = "black";
-    document.body.style.backgroundColor = "white";
-    document.getElementById("cuerpo").style.backgroundColor = "white";
-    document.getElementById("text-contra").style.backgroundColor = "white";
-    
-  }
-});
-
-
-
+// document.getElementById("btn-contra").addEventListener("click", function (e) {
+//   if (document.getElementById("btn-contra").checked) {
+//     document.getElementById("link-ref").style.color = "yellow";
+//     document.getElementById("text").style.color = "yellow";
+//     document.body.style.backgroundColor = "#0D1117";
+//     document.getElementById("cuerpo").style.backgroundColor = "#0D1117";
+//     document.getElementById("text-contra").style.backgroundColor = "#0D1117";
+//   } else {
+//     document.getElementById("link-ref").style.color = "black";
+//     document.getElementById("text").style.color = "black";
+//     document.body.style.backgroundColor = "white";
+//     document.getElementById("cuerpo").style.backgroundColor = "white";
+//     document.getElementById("text-contra").style.backgroundColor = "white";
+//   }
+// });
 
 //Restablecer cambios
 document.getElementById("btn-reload").addEventListener("click", function (e) {
   zoom = 1;
-  document.getElementById("link-ref").style.filter = "none";
-  document.getElementById("text").style.zoom = zoom;
-  document.getElementById("holis").style.zoom = zoom;
-  document.getElementById("link-ref").style.textDecoration = "none";
-  document.getElementById("link-ref").style.fontWeight = "normal";
-  document.getElementById("imagen-A").style.filter = "none";
-  document.getElementById("cuerpo").style.filter = "none";
-
-  document.getElementById("link-ref").style.color = "";
-  document.getElementById("text").style.color = "";
-  document.getElementById("cuerpo").style.backgroundColor = "";
-  document.getElementById("text-contra").style.backgroundColor = "";
-  document.body.style.backgroundColor = "";
-  
-
-  if (document.getElementById("btn-resalt").checked) {
-    document.getElementById("btn-resalt").checked = false;
-    document.getElementById("btn-byn").checked = false;
-
-    document.getElementById("btn-contra").checked = false;
-
-  } else {
-    document.getElementById("btn-resalt").checked = false;
-    document.getElementById("btn-byn").checked = false;
-    document.getElementById("btn-contra").checked = false;
-  }
-
-
+  resize();
+  noByN();
+  noUnderline();
+  noContrast();
 });
 
-function blancoNegro(){
+
+// Functions
+// Blanco y negro
+function blancoNegro() {
+  document.getElementById("imagen-A").style.filter = "grayscale(100%)";
+  document.getElementById("cuerpo").style.filter = "grayscale(100%)";
+  document.getElementById("link-ref").style.filter = "grayscale(100%)";
+}
+
+function noByN() {
   document.getElementById("imagen-A").style.filter = "none";
   document.getElementById("cuerpo").style.filter = "none";
   document.getElementById("link-ref").style.filter = "none";
+}
+
+// Underline
+function underline() {
+  document.getElementById("link-ref").style.textDecoration = "underline 2px";
+  document.getElementById("link-ref").style.fontWeight = "bolder";
+}
+
+function noUnderline() {
+  document.getElementById("link-ref").style.textDecoration = "none";
+  document.getElementById("link-ref").style.fontWeight = "normal";
+}
+
+// High Contrast
+function contrast() {
+  document.getElementById("link-ref").style.color = "yellow";
+  document.getElementById("text").style.color = "yellow";
+  document.body.style.backgroundColor = "#0D1117";
+  document.getElementById("cuerpo").style.backgroundColor = "#0D1117";
+  document.getElementById("text-contra").style.backgroundColor = "#0D1117";
+}
+
+function noContrast() {
+  document.getElementById("link-ref").style.color = "black";
+  document.getElementById("text").style.color = "black";
+  document.body.style.backgroundColor = "white";
+  document.getElementById("cuerpo").style.backgroundColor = "white";
+  document.getElementById("text-contra").style.backgroundColor = "white";
 }

@@ -42,6 +42,28 @@ document.getElementById("btn-resalt").addEventListener("click", function (e) {
   }
 });
 
+//contraste alto
+document.getElementById("btn-contra").addEventListener("click", function (e) {
+  if (document.getElementById("btn-contra").checked) {
+    document.getElementById("link-ref").style.color = "yellow";
+    document.getElementById("text").style.color = "yellow";
+    document.body.style.backgroundColor = "#0D1117";
+    document.getElementById("cuerpo").style.backgroundColor = "#0D1117";
+    document.getElementById("text-contra").style.backgroundColor = "#0D1117";
+    
+  } else {
+    document.getElementById("link-ref").style.color = "black";
+    document.getElementById("text").style.color = "black";
+    document.body.style.backgroundColor = "white";
+    document.getElementById("cuerpo").style.backgroundColor = "white";
+    document.getElementById("text-contra").style.backgroundColor = "white";
+    
+  }
+});
+
+
+
+
 //Restablecer cambios
 document.getElementById("btn-reload").addEventListener("click", function (e) {
   zoom = 1;

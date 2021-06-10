@@ -6,11 +6,20 @@
   display: none;
 }
 
+.botones {
+  visibility: hidden;
+}
+
 #btn-mas:checked ~ .btn-mas label {
   font-size: 2em;
 }
 
-.fa {
+#btn-mas:checked ~ * .fa, .fas {
+  visibility: visible;
+}
+
+.fa, .fas {
+  margin-top: 15px;
   font-size: 2vh;
 }
 

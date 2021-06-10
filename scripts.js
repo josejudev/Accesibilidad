@@ -125,7 +125,7 @@ function noContrast() {
 
 // Negative
 function negative() {
-  document.getElementById("btn-negativo").className = "fas fa-eye-slash";
+  document.getElementById("btn-negativo").className = "fa fa-eye-slash";
   document.getElementById("link-ref").style.color = "#0080FF";
   document.getElementById("text").style.color = "white";
   document.getElementById("holis").style.color = "#40C090";
@@ -135,7 +135,7 @@ function negative() {
 }
 
 function noNegative() {
-  document.getElementById("btn-negativo").className = "fas fa-eye";
+  document.getElementById("btn-negativo").className = "fa fa-eye";
   document.getElementById("link-ref").style.color = "black";
   document.getElementById("text").style.color = "black";
   document.getElementById("holis").style.color = "black";

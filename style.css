@@ -14,11 +14,11 @@
   font-size: 2em;
 }
 
-#btn-mas:checked ~ * .fa, .fas {
+#btn-mas:checked ~ * .fa {
   visibility: visible;
 }
 
-.fa, .fas {
+.fa{
   margin-top: 15px;
   font-size: 2vh;
 }

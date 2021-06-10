@@ -1,6 +1,5 @@
 //Botones para agrandar y disminuir el tamaño de la fuente
-var zoom = 1;
-
+let zoom = 1;
 document.getElementById("font-up").addEventListener("click", function (e) {
   if (zoom <= 1.55) {
     zoom += 0.05;
@@ -14,14 +13,9 @@ document.getElementById("font-down").addEventListener("click", function (e) {
   }
 });
 
-function resize() {
-  document.getElementById("text").style.zoom = zoom;
-  document.getElementById("holis").style.zoom = zoom;
-}
-
 let y = 1;
 let x;
-//nuevo blanco y negro
+// Blanco y negro
 document.getElementById("btn-byno").addEventListener("click", function (e) {
   y += 1;
   x = y % 2;
@@ -33,9 +27,7 @@ document.getElementById("btn-byno").addEventListener("click", function (e) {
   }
 });
 
-
-
-// nuevo Resaltar Links
+// Resaltar Links
 document.getElementById("btn-resalt").addEventListener("click", function (e) {
   y += 1;
   x = y % 2;
@@ -43,15 +35,11 @@ document.getElementById("btn-resalt").addEventListener("click", function (e) {
     underline();
   } else {
     noUnderline();
-    document.getElementById("link-ref").style.textDecoration = "none";
-    document.getElementById("link-ref").style.fontWeight = "normal";
     y = 1;
   }
 });
 
-
-
-// nuevo Contraste alto
+// Contraste alto
 document.getElementById("btn-contra").addEventListener("click", function (e) {
   y += 1;
   x = y % 2;
@@ -63,8 +51,6 @@ document.getElementById("btn-contra").addEventListener("click", function (e) {
   }
 });
 
-
-
 //Restablecer cambios
 document.getElementById("btn-reload").addEventListener("click", function (e) {
   zoom = 1;
@@ -74,16 +60,22 @@ document.getElementById("btn-reload").addEventListener("click", function (e) {
   noContrast();
 });
 
-
 // Functions
+function resize() {
+  document.getElementById("text").style.zoom = zoom;
+  document.getElementById("holis").style.zoom = zoom;
+}
+
 // Blanco y negro
 function blancoNegro() {
+  document.getElementById("btn-byno").className = "fa fa-tint";
   document.getElementById("imagen-A").style.filter = "grayscale(100%)";
   document.getElementById("cuerpo").style.filter = "grayscale(100%)";
   document.getElementById("link-ref").style.filter = "grayscale(100%)";
 }
 
 function noByN() {
+  document.getElementById("btn-byno").className = "fa fa-tint-slash";
   document.getElementById("imagen-A").style.filter = "none";
   document.getElementById("cuerpo").style.filter = "none";
   document.getElementById("link-ref").style.filter = "none";

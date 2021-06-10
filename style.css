@@ -10,7 +10,7 @@
   font-size: 2em;
 }
 
-.fa  {
+.fa {
   font-size: 2vh;
 }
 
@@ -44,7 +44,7 @@ p {
 .btn-mas label {
   display: block;
   text-decoration: none;
-  background: #34495E;
+  background: #34495e;
   color: #fff;
   width: 55px;
   height: 55px;
@@ -55,11 +55,11 @@ p {
 
 .botones a:hover {
   background: #fff;
-  color: #34495E;
+  color: #34495e;
 }
 
 .btn-mas label {
   cursor: pointer;
-  background: #34495E;
+  background: #34495e;
   font-size: 25px;
 }

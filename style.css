@@ -6,11 +6,6 @@
   display: none;
 }
 
-#btn-mas:checked ~ .botones a {
-  margin-bottom: 8px;
-  opacity: 1;
-}
-
 #btn-mas:checked ~ .btn-mas label {
   font-size: 2em;
 }
@@ -32,17 +27,9 @@
   align-items: center;
 }
 
-button {
-  margin: 10px;
-}
-
 p {
   text-align: justify;
   font-size: 15px;
-}
-
-.btn-outline-danger {
-  margin: 10px;
 }
 
 .imagen {
@@ -63,19 +50,12 @@ p {
   height: 55px;
   line-height: 55px;
   text-align: center;
-  border-radius: 50%;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
 .botones a:hover {
   background: #fff;
   color: #34495E;
-}
-
-.botones a {
-  margin-bottom: -15px;
-  margin-top: 15px;
-  opacity: 0;
 }
 
 .btn-mas label {

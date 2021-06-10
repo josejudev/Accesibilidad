@@ -79,19 +79,18 @@ function resize() {
   document.getElementById("holis").style.zoom = zoom;
 }
 
+let server = document.getElementsByTagName("div");
 // Blanco y negro
 function blancoNegro() {
-  document.getElementById("btn-byno").className = "fa fa-tint";
-  document.getElementById("imagen-A").style.filter = "grayscale(100%)";
-  document.getElementById("cuerpo").style.filter = "grayscale(100%)";
-  document.getElementById("link-ref").style.filter = "grayscale(100%)";
+  for(let i=0; i<server.length; i++) {
+    server[i].style.filter = "grayscale(100%)";
+  }
 }
 
 function noByN() {
-  document.getElementById("btn-byno").className = "fa fa-tint-slash";
-  document.getElementById("imagen-A").style.filter = "none";
-  document.getElementById("cuerpo").style.filter = "none";
-  document.getElementById("link-ref").style.filter = "none";
+  for(let i=0; i<server.length; i++) {
+    server[i].style.filter = "none";
+  }
 }
 
 // Underline

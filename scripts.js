@@ -13,55 +13,56 @@ document.getElementById("font-down").addEventListener("click", function (e) {
   }
 });
 
-let y = 1;
-let x;
+let contador_1 = 1;
+let contador_2;
 // Blanco y negro
 document.getElementById("btn-byno").addEventListener("click", function (e) {
-  y += 1;
-  x = y % 2;
-  if (x == 0) {
+  contador_1 += 1;
+  contador_2 = contador_1 % 2;
+  if (contador_2 == 0) {
     blancoNegro();
   } else {
     noByN();
-    y = 1;
+    contador_1 = 1;
   }
 });
 
 // Resaltar Links
 document.getElementById("btn-resalt").addEventListener("click", function (e) {
-  y += 1;
-  x = y % 2;
-  if (x == 0) {
+  contador_1 += 1;
+  contador_2 = contador_1 % 2;
+  if (contador_2 == 0) {
     underline();
   } else {
     noUnderline();
-    y = 1;
+    contador_1 = 1;
   }
 });
 
 // Contraste alto
 document.getElementById("btn-contra").addEventListener("click", function (e) {
-  y += 1;
-  x = y % 2;
-  if (x == 0) {
+  contador_1 += 1;
+  contador_2 = contador_1 % 2;
+  if (contador_2 == 0) {
     contrast();
   } else {
     noContrast();
-    y = 1;
+    contador_1 = 1;
   }
 });
 
 // Contraste alto
 document.getElementById("btn-negativo").addEventListener("click", function (e) {
-  y += 1;
-  x = y % 2;
-  if (x == 0) {
+  contador_1 += 1;
+  contador_2 = contador_1 % 2;
+  if (contador_2 == 0) {
     negative();
   } else {
     noNegative();
-    y = 1;
+    contador_1 = 1;
   }
 });
+
 
 //Restablecer cambios
 document.getElementById("btn-reload").addEventListener("click", function (e) {

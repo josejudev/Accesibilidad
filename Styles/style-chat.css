@@ -1,0 +1,353 @@
+.chat-bar-collapsible {
+    position: fixed;
+    bottom: 5px;
+    right: 0px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 200;
+  }
+  
+  .btn-funciones {
+    margin-bottom: 10px;
+    margin-left: 11px;
+  }
+  
+  .collapsible_up {
+    background-color: #721f65;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 450px;
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+    border: solid 1px #721f65;
+    transition: all 0.3s ease-in-out;
+  }
+  .collapsible:hover {
+    background-color: #09804A;
+    border: none;
+  }
+  
+  .collapsible_down {
+    background-color: #34495e;
+    color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    text-transform: none;
+    font-size: 18px;
+    width: 80px;
+    height: 80px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 100px;
+    transition: all 0.3s ease-in-out;
+    display: inline;
+    justify-content: center;
+    margin-left: 40%;
+    -webkit-animation: heartbeat 1.5s steps(2, end) 2 both;
+    animation: heartbeat 1.5s steps(2, end) 2 both;
+      -webkit-animation: heartbeat 1.5s steps(2, end) 2 both;
+    animation: heartbeat 1.5s steps(2, end) 2 both;
+  }
+  
+  .content_chat {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+  
+  .full-chat-block {
+    width: 450px;
+    background: white;
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  .outer-container {
+    min-height: 500px;
+    bottom: 0%;
+    position: relative;
+  }
+  
+  .chat-container {
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+  }
+  
+  .chat-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .chat-bar-input-block {
+    display: flex;
+    float: left;
+    position: sticky;
+    bottom: 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 0px 10px 10px;
+  }
+  
+  .chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+  }
+  
+  #chat-icon:hover {
+    opacity: 0.7;
+  }
+  
+  /* Chat bubbles */
+  
+  #userInput {
+    width: 75%;
+  }
+  
+  .input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none;
+  }
+  
+  .userText {
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+  }
+  
+  .userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #5ca6fa;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup 0.5s forwards;
+    margin-top: 10px; /* N */
+    margin-bottom: 10px; /* N */
+  }
+  
+  .botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup 1s forwards;
+    margin-top: 10px; /* N */
+    margin-bottom: 10px; /* N */
+  }
+  
+  @keyframes floatup {
+    from {
+      transform: translateY(14px);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .full-chat-block {
+      width: 100%;
+      border-radius: 0px;
+    }
+  
+    .chat-bar-collapsible {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+    }
+  
+    .collapsible {
+      width: 100%;
+      border: 0px;
+      border-top: 3px solid white;
+      border-radius: 0px;
+    }
+  }
+  
+  .speech-bubble {
+    background: #6495ed;
+    /* el color de fondo */
+    color: #fff;
+    /* el color del texto */
+    font-family: Arial, Sans-serif;
+    font-size: 12px;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+    width: 200px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: auto;
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  
+  .speech-bubble:after {
+    border: solid 10px transparent;
+    border-top-color: #6495ed;
+    /* igual al color de fondo */
+    border-bottom: 0;
+    bottom: -20px;
+    /* igual al borde + el padding-bottom de la definición anterior */
+    content: "";
+    display: block;
+    height: 0;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+  }
+  
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    100% {
+      -webkit-transform: translateY(-25px);
+      transform: translateY(-25px);
+    }
+  }
+  
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    100% {
+      -webkit-transform: translateY(-25px);
+      transform: translateY(-25px);
+    }
+  }
+  
+  @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
+  
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
+  

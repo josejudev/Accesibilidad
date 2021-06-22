@@ -7,10 +7,15 @@
 }
 
 
+.botones-accesibilidad input{
+  display:none
+}
+
 
 #btn-mas {
   display: none;
 }
+
 
 .botones-accesibilidad {
   visibility: hidden;
@@ -28,7 +33,7 @@
 }
 
 
-.botones-accesibilidad i,
+.botones-accesibilidad i,.botones-accesibilidad label,
 .btn-mas label {
   display: block;
   text-decoration: none;
@@ -45,11 +50,12 @@
 -webkit-border-radius: 42px 42px 42px 42px;
 }
 
-.botones-accesibilidad i:hover {
+.botones-accesibilidad i:hover, .botones-accesibilidad label:hover {
   background: #fff;
   color: #34495e;
   font-size: 1.5em;
   transform: translateX(5px);
+
    
 }
 
@@ -85,3 +91,6 @@ p {
   height: 30%;
   margin-left: 30px;
 }
+
+
+

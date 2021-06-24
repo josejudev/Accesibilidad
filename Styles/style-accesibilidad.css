@@ -11,6 +11,10 @@
   display:none
 }
 
+#initialMessage{
+  color: black;
+}
+
 
 #btn-mas {
   display: none;
@@ -23,7 +27,7 @@
 }
 
 #btn-mas:checked ~ .btn-mas label {
-  font-size: 2em;
+  font-size: 50px;
   transform: translateY(-5px);
 }
 
@@ -62,10 +66,9 @@
 .btn-mas label {
   cursor: pointer;
   background: #34495e;
-  font-size: 25px;
+  font-size: 40px;
 
 }
-
 .card {
   width: 50%;
   height: 50%;

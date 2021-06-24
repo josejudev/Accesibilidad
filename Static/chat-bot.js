@@ -63,7 +63,7 @@ function firstBotMessage() {
   let firstMessage =
     "Bienvenido, soy la asistente virtual <b> Wendy </b>  <br>A continuacion puede seleccionar una respuesta o escribirla ";
   document.getElementById("botStarterMessage").innerHTML =
-    '<p class="botText"><span>' + firstMessage + "</span></p>";
+    '<p class="botText" id = "initialMessage"><span>' + firstMessage + "</span></p>";
 
   let time = getTime();
 

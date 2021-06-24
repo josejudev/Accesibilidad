@@ -23,19 +23,18 @@
     <div class="container-accesibilidad">
         <input type="checkbox" id="btn-mas" checked/>
         <div class="btn-mas">
-            <label for="btn-mas" class="fab fa-accessible-icon"></label>
+            <label for="btn-mas" class="fas fa-universal-access"></label>
         </div>
         <div class="botones-accesibilidad">
             <i class="fa fa-search-plus" id="max"></i>
             <i class="fa fa-search-minus" id="small"></i>
-            <input  id="btn-byno" type="checkbox" ><label for="btn-byno" class="fa fa-adjust"></label></input>
-            <input  id="btn-resalt" type="checkbox"><label for="btn-resalt" class="fa fa-underline"></label></input>
-            <input  id="btn-contra" type= "checkbox"><label for="btn-contra" class="fa fa-tint"></label></input>
-            <input  id="btn-legible" type="checkbox"><label for="btn-legible" class="fa fa-font"></label></input>
-            <i class="fa fa-redo-alt" id="btn-reload"></i>
+            <input  id="btn-byno" type="checkbox" onclick="changeStatus()"><label for="btn-byno" class="fa fa-adjust"></label></input>
+            <input  id="btn-resalt" type="checkbox" onclick="changeStatus_2()"><label for="btn-resalt" class="fa fa-underline"></label></input>
+            <input  id="btn-contra" type= "checkbox" onclick="changeStatus_3()"><label for="btn-contra" class="fa fa-tint"></label></input>
+            <input  id="btn-legible" type="checkbox" onclick="changeStatus_4()"><label for="btn-legible" class="fa fa-font"></label></input>
+            <i class="fa fa-undo" id="btn-reload"></i>
         </div>
     </div>
-
 
     <!-- end accesibilidad -->
 
@@ -60,6 +59,9 @@
               dolore, corporis repellat harum voluptatem labore impedit quibusdam,
               deleniti rem est magnam.
             </p>
+            <span>
+                Lorem ipsum
+            </span>
             <ul>
               <li><a href="#" style="text-decoration: none">Link 1</a></li>
               <li><a href="#" style="text-decoration: none">Link 2</a></li>
@@ -92,28 +94,29 @@
                                 <span>Loading...</span>
 
                             </p>
-                            </button>
 
-
-                            <button type="button" class="btn-funciones btn btn-outline-success" id="estadia"
-                                value="Proceso de estadía" onclick="estadia()">
-                                Estadía
-                            </button>
-                            <button type="button" class="btn-funciones btn btn-outline-success" id="estancia"
-                                value="Proceso de estancia" onclick="estancia()">
-                                Estancia
-                            </button>
-                            <button type="button" class="btn-funciones btn btn-outline-success" id="reinscripcion"
-                                value="Proceso de reinscripcion" onclick="reinscripcion()">
-                                Reinscripcion
-                            </button>
                         </div>
+                        <button type="button" class="btn-funciones btn btn-outline-success" id="estadia"
+                        value="Proceso de estadía" onclick="estadia()">
+                        Estadía
+                    </button>
+                    <button type="button" class="btn-funciones btn btn-outline-success" id="estancia"
+                        value="Proceso de estancia" onclick="estancia()">
+                        Estancia
+                    </button>
+                    <button type="button" class="btn-funciones btn btn-outline-success" id="reinscripcion"
+                        value="Proceso de reinscripcion" onclick="reinscripcion()">
+                        Reinscripcion
+                    </button>
                         <!-- User input box -->
                         <div class="chat-bar-input-block">
+
                             <div id="userInput">
+
                                 <input id="textInput" class="input-box" type="text" name="msg"
                                     onkeyup="this.value = this.value.toLowerCase();"
                                     placeholder="Presiona 'Enter' para enviar" />
+                                    
 
                             </div>
                             <div class="chat-bar-icons">

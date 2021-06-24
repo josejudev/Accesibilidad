@@ -37,6 +37,7 @@ function contrast() {
   $("#loading-overlay").css("background", "#0D1117");
   $(".TEXTOGLITCH").css("color", "black");
   
+  
   document.body.style.backgroundColor = "#0D1117";
   for (let i = 0; i < high_contrast.length; i++) {
     high_contrast[i].style.color = "#66D1D1";
@@ -63,6 +64,7 @@ function noContrast() {
   $(".chat-bar-input-block").css("background", "");
   $("#loading-overlay").css("background", "");
   $(".TEXTOGLITCH").css("color", "");
+
 
   for (let i = 0; i < high_contrast.length; i++) {
     high_contrast[i].style.color = "";

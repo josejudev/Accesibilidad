@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Styles/style-accesibilidad.css" />
     <link rel="stylesheet" href="/Styles/style-chat.css" />
+    <link rel="stylesheet" href="/Styles/body-html.css">
 
     <script src="https://kit.fontawesome.com/eb496ab1a0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,33 +17,34 @@
  
 <body>
 
-
-
-
     <!-- block accesibilidad -->
+
     <div class="container-accesibilidad">
-        <input type="checkbox" id="btn-mas" checked/>
+        <input type="checkbox" id="btn-mas"checked/>
         <div class="btn-mas">
             <label for="btn-mas" class="fas fa-universal-access"></label>
         </div>
         <div class="botones-accesibilidad">
-            <i class="fa fa-search-plus" id="max"></i>
-            <i class="fa fa-search-minus" id="small"></i>
-            <input  id="btn-byno" type="checkbox" onclick="changeStatus()"><label for="btn-byno" class="fa fa-adjust"></label></input>
+            <i class="fa fa-search-plus" id="fontSizePlus"></i>
+            <i class="fa fa-search-minus" id="fontSizeMinus"></i>
             <input  id="btn-resalt" type="checkbox" onclick="changeStatus_2()"><label for="btn-resalt" class="fa fa-underline"></label></input>
-            <input  id="btn-contra" type= "checkbox" onclick="changeStatus_3()"><label for="btn-contra" class="fa fa-tint"></label></input>
-            <input  id="btn-legible" type="checkbox" onclick="changeStatus_4()"><label for="btn-legible" class="fa fa-font"></label></input>
+            <input  id="btn-legible" type="checkbox" onclick="changeStatus_4()"><label id="letraN" for="btn-legible" class="fa fa-bol">N</label></input>
+            <input  id="btn-contra" type= "checkbox" onclick="changeStatus_3()"><label for="btn-contra" class="fa fa-adjust"></label></input>
+            <input  id="btn-byno" type="checkbox" onclick="changeStatus()"><label for="btn-byno" class="fa fa-tint"></label></input>
             <i class="fa fa-undo" id="btn-reload"></i>
         </div>
     </div>
 
-    <!-- end accesibilidad -->
+    <!-- end accesibilidad -->  
+
+
+
 
     <div class="card">
         <div class="card-body" id="text-contra">
           <section>
             <h1>Lorem</h1>
-            <p>
+            <p class="intro">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Nostrum, suscipit at? Beatae alias repellendus, molestias aut minima
               excepturi atque quisquam voluptatem ullam exercitationem, nulla
@@ -72,7 +74,8 @@
         </div>
       </div>
 
-    <div class="chat-bar-collapsible" id="BgContent">
+
+      <div class="chat-bar-collapsible" id="BgContent">
 
         <div class="speech-bubble" id="bubble"> ¿En qué te puedo ayudar?</div>
 
@@ -88,14 +91,16 @@
                     <div class="chat-container">
                         <!-- Messages -->
                         <div id="chatbox">
-                            <img src="/static/images/logo/asistente.gif" width="280px">
+                            <img src="/static/images/logo/Lince_Mitad.png" width="280px">
                             <h5 id="chat-timestamp"></h5>
                             <p id="botStarterMessage" class="botText">
                                 <span>Loading...</span>
 
                             </p>
 
+
                         </div>
+                        
                         <button type="button" class="btn-funciones btn btn-outline-success" id="estadia"
                         value="Proceso de estadía" onclick="estadia()">
                         Estadía
@@ -110,17 +115,14 @@
                     </button>
                         <!-- User input box -->
                         <div class="chat-bar-input-block">
-
                             <div id="userInput">
-
                                 <input id="textInput" class="input-box" type="text" name="msg"
                                     onkeyup="this.value = this.value.toLowerCase();"
                                     placeholder="Presiona 'Enter' para enviar" />
-                                    
 
                             </div>
                             <div class="chat-bar-icons">
-                                <i id="chat-icon" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                                <i id="chat-icon" class="fa fa-send" onclick="sendButton()"></i>
                             </div>
                         </div>
                         <div id="chat-bar-bottom">
@@ -130,15 +132,15 @@
             </div>
 
         </div>
-        
+
 
     </div>
-
     
 
 
     <script src="/Static/accesibilidad.js"></script>
     <script src="/Static/chat-bot.js"></script>
+    <script src="/Static/resize.js"></script>
 
 </body>
 

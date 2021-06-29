@@ -1,3 +1,37 @@
+//Botones para agrandar y disminuir el tamaño de la fuente
+//Aumentar y disminuir texto
+let minimun = 16;
+let maximun = 20;
+let reset = $("p").css("fontSize");
+let elm = $("p");
+let size = str_replace(reset, "px", "");
+
+$("#fontSizePlus").click(function () {
+  if (size <= maximun) {
+    size++;
+    elm.css({ fontSize: size });
+  }
+  return false;
+});
+
+$("#fontSizeMinus").click(function () {
+  if (size >= minimun) {
+    size--;
+    elm.css({ fontSize: size });
+  }
+
+  return false;
+});
+
+$("a.fontReset").click(function () {
+  elm.css({ fontSize: reset });
+});
+
+function str_replace(haystack, needle, replacement) {
+  var temp = haystack.split(needle);
+  return temp.join(replacement);
+}
+
 // Blanco y negro a toda la pagina completa
 function blancoNegro() {
   document.getElementsByTagName("html")[0].style.filter = "grayscale(100%)";
@@ -36,8 +70,9 @@ function contrast() {
   $("#initialMessage").css("color", "black");
   $("#loading-overlay").css("background", "#0D1117");
   $(".TEXTOGLITCH").css("color", "black");
-  
-  
+  $(".detail-event").css("color", "white");
+  $(".icon-event").css("color", "white");
+
   document.body.style.backgroundColor = "#0D1117";
   for (let i = 0; i < high_contrast.length; i++) {
     high_contrast[i].style.color = "#66D1D1";
@@ -64,7 +99,8 @@ function noContrast() {
   $(".chat-bar-input-block").css("background", "");
   $("#loading-overlay").css("background", "");
   $(".TEXTOGLITCH").css("color", "");
-
+  $(".detail-event").css("color", "");
+  $(".icon-event").css("color", "");
 
   for (let i = 0; i < high_contrast.length; i++) {
     high_contrast[i].style.color = "";
@@ -104,7 +140,6 @@ function noLegible() {
 
 const check = document.getElementById("btn-byno");
 
-
 if (localStorage.getItem("mod-gray") === null) {
   localStorage.setItem("mod-gray", "false");
 }
@@ -131,9 +166,7 @@ function changeStatus() {
   }
 }
 
-
-
-const check_2 = document.getElementById("btn-resalt")
+const check_2 = document.getElementById("btn-resalt");
 
 if (localStorage.getItem("mod-underline") === null) {
   localStorage.setItem("mod-underline", "false");
@@ -161,8 +194,7 @@ function changeStatus_2() {
   }
 }
 
-
-const check_3 = document.getElementById("btn-contra")
+const check_3 = document.getElementById("btn-contra");
 
 if (localStorage.getItem("mod-contrast") === null) {
   localStorage.setItem("mod-contrast", "false");
@@ -190,10 +222,7 @@ function changeStatus_3() {
   }
 }
 
-
-
-
-const check_4 = document.getElementById("btn-legible")
+const check_4 = document.getElementById("btn-legible");
 
 if (localStorage.getItem("mod-bold") === null) {
   localStorage.setItem("mod-bold", "false");
@@ -222,7 +251,6 @@ function changeStatus_4() {
 }
 
 //Fin del Local Storage
-
 
 //Restablecer cambios
 

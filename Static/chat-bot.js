@@ -6,7 +6,7 @@ var contentBig = document.getElementsByClassName("chat-bar-collapsible ");
 // Ocultar y mostrar elementos
 document.getElementById("oculAsis").style.display = "none";
 
-setTimeout(function() {document.getElementById("bubble").style.display = "none";},10000)
+setTimeout(function () { document.getElementById("bubble").style.display = "none"; }, 10000)
 
 // Comportamiento de la ventana al momento de abrir y cerrar
 $(document).ready(function () {
@@ -26,7 +26,7 @@ for (let i = 0; i < coll.length; i++) {
       document.getElementById("oculAsis").style.display = "none";
       document.getElementById("bubble").style.display = "none";
       document.getElementById("chat-icon").style.display = "block";
-      
+
     } else {
       // Cuando la ventana esta abierta
 
@@ -68,7 +68,7 @@ function firstBotMessage() {
   let time = getTime();
 
   $("#chat-timestamp").append(time);
-
+  setInterval(time, 10000);
   document.getElementById("userInput").scrollIntoView(false);
 }
 
@@ -129,7 +129,7 @@ function estadia() {
   setTimeout(() => {
     getHardResponse(userText);
   }, 1000);
-  
+
 }
 
 function estancia() {
@@ -189,7 +189,7 @@ function getBotResponse(input) {
       "Para iniciar el trámite el alumno debe: <br> Realizar el registro y subir los siguientes documentos al sistema SIGA" +
       `<a href="#">(AQUÍ)</a>` +
       " <br> 1.-Documento de Solicitud de Estadía <br> 2.-Carta de Exclusión de Responsabilidad Covid, para la realización de Estadía <br> 3.-Identificación con fotografía del padre y/o tutor legal <br> 4.-Constancia de vigencia del IMSS. <br> 5.-Carta de Exclusión de Responsabilidad (DVEU-RG.16) o carta de exclusión de responsabilidad  (DVEU-RG.17) si el alumno es su propio tutor. Con los soportes de identificación con fotografía del tutor legal. <br>" +
-      `<a href="#">Presiona aquí para mas informacion</a>`
+      `<a href="#" style="fontWeight= bold">Presiona aquí para mas informacion</a>`
     );
   }
   if (
@@ -199,9 +199,9 @@ function getBotResponse(input) {
     input == "estancias"
   ) {
     return "Para iniciar el trámite el alumno debe: <br> Realizar el registro y subir los siguientes documentos al sistema SIGA" +
-    `<a href="#">(AQUÍ)</a>` +
-    " <br> 1.-Documento de Solicitud de Estancia <br> 2.-Carta de Exclusión de Responsabilidad Covid, para la realización de Estadía <br> 3.-Identificación con fotografía del padre y/o tutor legal <br> 4.-Constancia de vigencia del IMSS. <br> 5.-Carta de Exclusión de Responsabilidad (DVEU-RG.16) o carta de exclusión de responsabilidad  (DVEU-RG.17) si el alumno es su propio tutor. Con los soportes de identificación con fotografía del tutor legal." +
-    `<a href="#">Presiona aquí para mas informacion</a>`;
+      `<a href="#">(AQUÍ)</a>` +
+      " <br> 1.-Documento de Solicitud de Estancia <br> 2.-Carta de Exclusión de Responsabilidad Covid, para la realización de Estadía <br> 3.-Identificación con fotografía del padre y/o tutor legal <br> 4.-Constancia de vigencia del IMSS. <br> 5.-Carta de Exclusión de Responsabilidad (DVEU-RG.16) o carta de exclusión de responsabilidad  (DVEU-RG.17) si el alumno es su propio tutor. Con los soportes de identificación con fotografía del tutor legal." +
+      `<a href="#">Presiona aquí para mas informacion</a>`;
   }
   if (
     input == "Proceso de reinscripcion" ||

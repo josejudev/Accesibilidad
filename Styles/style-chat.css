@@ -1,5 +1,3 @@
-
-
 .chat-bar-collapsible {
   position: fixed;
   bottom: 5px;
@@ -7,7 +5,6 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 200;
   border-radius: 18px 18px 0px 0px;
-
 }
 
 .btn-funciones {
@@ -32,9 +29,10 @@
   border: none;
   transition: all 0.3s ease-in-out;
   border-radius: 18px 18px 0px 0px;
-
 }
-
+.collapsible_up:hover {
+  background-color: #721f65;
+}
 
 .collapsible_down {
   transition: transform 0.2s;
@@ -56,13 +54,11 @@
   justify-content: center;
   border: none;
   margin-left: 70%;
-
 }
 
-.collapsible_down:hover{
+.collapsible_down:hover {
   transform: scale(1.1);
-  background-color:#721f65;
-
+  background-color: #721f65;
 }
 
 .content_chat {
@@ -228,8 +224,8 @@
 
 .speech-bubble {
   position: fixed;
-  right:10px;
-  bottom:80px;
+  right: 10px;
+  bottom: 80px;
   background: #6495ed;
   /* el color de fondo */
   color: #fff;
@@ -287,5 +283,3 @@
     transform: translateY(-25px);
   }
 }
-
-

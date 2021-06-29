@@ -6,29 +6,29 @@
   margin-top: 100px;
 }
 
-
-.botones-accesibilidad input{
-  display:none
+.botones-accesibilidad input {
+  display: none;
 }
-
-#initialMessage{
+#initialMessage {
   color: black;
 }
-
 
 #btn-mas {
   display: none;
 }
 
+#letraN {
+  font-family: monospace;
+  font-size: 1.5em;
+}
 
 .botones-accesibilidad {
   visibility: hidden;
-  
 }
 
 #btn-mas:checked ~ .btn-mas label {
-  font-size: 50px;
-  transform: translateY(-5px);
+  font-size: 45px;
+  transform: scale(1.1);
 }
 
 #btn-mas:checked ~ * .fa {
@@ -36,8 +36,8 @@
   margin-top: 10px;
 }
 
-
-.botones-accesibilidad i,.botones-accesibilidad label,
+.botones-accesibilidad i,
+.botones-accesibilidad label,
 .btn-mas label {
   display: block;
   text-decoration: none;
@@ -50,50 +50,27 @@
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
   transition: transform 250ms;
   border-radius: 42px 42px 42px 42px;
--moz-border-radius: 42px 42px 42px 42px;
--webkit-border-radius: 42px 42px 42px 42px;
+  -moz-border-radius: 42px 42px 42px 42px;
+  -webkit-border-radius: 42px 42px 42px 42px;
 }
 
-.botones-accesibilidad i:hover, .botones-accesibilidad label:hover {
+.botones-accesibilidad i:hover,
+.botones-accesibilidad label:hover {
   background: #fff;
   color: #34495e;
   font-size: 1.5em;
   transform: translateX(5px);
-
-   
 }
 
 .btn-mas label {
   cursor: pointer;
   background: #34495e;
   font-size: 40px;
-
-}
-.card {
-  width: 50%;
-  height: 50%;
-  margin: auto;
-  margin-top: 10%;
 }
 
-.card-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn-mas label {
+  cursor: pointer;
+  background: #34495e;
+  font-size: 40px;
 }
-
-p {
-  text-align: justify;
-  font-size: 15px;
-}
-
-.imagen {
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  height: 30%;
-  margin-left: 30px;
-}
-
-
 

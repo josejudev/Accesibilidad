@@ -1,9 +1,11 @@
 //Botones para agrandar y disminuir el tamaño de la fuente
 //Aumentar y disminuir texto
+
+
 let minimun = 16;
 let maximun = 20;
 let reset = $("p").css("fontSize");
-let elm = $("p");
+let elm = $("p,a");
 let size = str_replace(reset, "px", "");
 
 $("#fontSizePlus").click(function () {
@@ -72,6 +74,8 @@ function contrast() {
   $(".TEXTOGLITCH").css("color", "black");
   $(".detail-event").css("color", "white");
   $(".icon-event").css("color", "white");
+  $(".widget").css("background", "#0D1117");
+
 
   document.body.style.backgroundColor = "#0D1117";
   for (let i = 0; i < high_contrast.length; i++) {
@@ -101,6 +105,7 @@ function noContrast() {
   $(".TEXTOGLITCH").css("color", "");
   $(".detail-event").css("color", "");
   $(".icon-event").css("color", "");
+  $(".widget").css("background", "");
 
   for (let i = 0; i < high_contrast.length; i++) {
     high_contrast[i].style.color = "";
@@ -255,9 +260,62 @@ function changeStatus_4() {
 //Restablecer cambios
 
 document.getElementById("btn-reload").addEventListener("click", (e) => {
+  elm.css({ fontSize: reset });
   noByN();
   noUnderline();
   noContrast();
   noLegible();
   localStorage.clear();
+});
+
+
+
+tippy('#fontSizePlus', {
+  content: 'Aumentar Texto',
+  followCursor: true,
+  placement: 'right',
+  hideOnClick: false
+});
+tippy('#fontSizeMinus', {
+  content: 'Disminuir Texto',
+  followCursor: true,
+  placement: 'right',
+  hideOnClick: false
+});
+tippy('.fa-underline', {
+  content: 'Subrayar Links',
+  followCursor: true,
+  placement: 'right',
+  hideOnClick: false
+});
+tippy('.fa-bol', {
+  content: 'Letras En Negritas',
+  followCursor: true,
+  placement: 'right',
+  hideOnClick: false
+});
+tippy('.fa-adjust', {
+  content: 'Modo Alto Contraste',
+  followCursor: true,
+  placement: 'right',
+  hideOnClick: false,
+  zIndex: 9999,
+});
+tippy('.fa-tint', {
+  content: 'Modo Blanco y Negro',
+  followCursor: true,
+  placement: 'right',
+  hideOnClick: false
+});
+tippy('#btn-reload', {
+  content: 'Deshacer',
+  followCursor: true,
+  placement: 'right',
+  hideOnClick: false
+});
+tippy('.btn-mas', {
+  content: 'Accesibilidad',
+  followCursor: true,
+  placement: 'right',
+  hideOnClick: false
 });

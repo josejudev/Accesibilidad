@@ -16,7 +16,7 @@
     <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <title>Accesibilidad</title>
 </head>
- 
+
 <body>
 
 
@@ -25,18 +25,22 @@
     <!-- block accesibilidad -->
 
     <div class="container-accesibilidad">
-        <input type="checkbox" id="btn-mas"checked/>
+        <input type="checkbox" id="btn-mas" checked />
         <div class="btn-mas">
             <label for="btn-mas" class="fas fa-universal-access"></label>
         </div>
         <div class="botones-accesibilidad">
             <i class="fa fa-search-plus" id="fontSizePlus"></i>
             <i class="fa fa-search-minus" id="fontSizeMinus"></i>
-            <input  id="btn-resalt" type="checkbox" onclick="changeStatus_2()"><label for="btn-resalt" class="fa fa-underline"></label></input>
-            <input  id="btn-legible" type="checkbox" onclick="changeStatus_4()"><label id="letraN" for="btn-legible" class="fa fa-bol">N</label></input>
-            <input  id="btn-contra" type= "checkbox" onclick="changeStatus_3()"><label for="btn-contra" class="fa fa-adjust"></label></input>
-            <input  id="btn-byno" type="checkbox" onclick="changeStatus()"><label for="btn-byno" class="fa fa-tint"></label></input>
-            <input  id="btn-tb" type="checkbox" onclick="changeStatus5()"><label for="btn-tb" class="fa fa-assistive-listening-systems" ></label></input>
+            <i class="fa fa-assistive-listening-systems" id="btn-talk" value="Decir"></i>
+            <input id="btn-resalt" type="checkbox" onclick="changeStatus_2()"><label for="btn-resalt"
+                class="fa fa-underline"></label></input>
+            <input id="btn-legible" type="checkbox" onclick="changeStatus_4()"><label id="letraN" for="btn-legible"
+                class="fa fa-bol">N</label></input>
+            <input id="btn-contra" type="checkbox" onclick="changeStatus_3()"><label for="btn-contra"
+                class="fa fa-adjust"></label></input>
+            <input id="btn-byno" type="checkbox" onclick="changeStatus()"><label for="btn-byno"
+                class="fa fa-tint"></label></input>
             <i class="fa fa-undo" id="btn-reload"></i>
         </div>
     </div>
@@ -44,48 +48,42 @@
         // With the above scripts loaded, you can call `tippy()` with a CSS
         // selector and a `content` prop:
 
-      </script>
-    <!-- end accesibilidad -->  
+    </script>
+    <!-- end accesibilidad -->
 
 
 
 
     <div class="card">
+
         <div class="card-body" id="text-contra">
-          <section>
-            <h1>Lorem</h1>
-            <p class="intro">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Nostrum, suscipit at? Beatae alias repellendus, molestias aut minima
-              excepturi atque quisquam voluptatem ullam exercitationem, nulla
-              itaque suscipit facere cupiditate vitae tempora?Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Reiciendis iure quo
-              recusandae tempora voluptates similique quia dolorem eum, est maxime
-              odit sed illo rerum expedita corporis, blanditiis cupiditate
-              voluptatum. Sapiente. lorem ipsum dolor sit amet Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Saepe itaque alias ipsum,
-              vero ut quae veniam voluptas error eos, delectus commodi ipsam magni
-              hic cumque dolores repellat odit numquam explicabo. Lorem ipsum
-              dolor, sit amet consectetur adipisicing elit. Ullam reiciendis
-              molestias laborum consequuntur incidunt iusto in officia, tempora
-              dolore, corporis repellat harum voluptatem labore impedit quibusdam,
-              deleniti rem est magnam.
-            </p>
-            <span>
-                Lorem ipsum
-            </span>
-            <ul>
-              <li><a id="buto" href="#" style="text-decoration: none">Link 1</a></li>
-              <li><a href="#" style="text-decoration: none">Link 2</a></li>
-              <li><a href="#" style="text-decoration: none">Link 3</a></li>
-            </ul>
-          </section>
-          <img class="imagen" src="edificio.jpg" alt="" id="imagen-A" />
+            <section>
+                <h1>Lorem</h1>
+                <p class="intro" id="texto_examp">
+                    Un cuervo que tenía mucha hambre vio tendida en el suelo a una culebra que parecía dormida. Sin
+                    vacilar la atrapó entre sus garras y al instante la culebra se despertó de su sueño y mordió al
+                    cuervo. Las últimas palabras del cuervo fueron entonces que aquella caza que parecía sencilla
+                    finalmente le costó la vida.
+                    Los pasajeros de una embarcación se encontraban afligidos por el mal tiempo que hacía y sentían que,
+                    en poco tiempo, la nave naufragaría. Sin embargo, de un momento a otro, el clima cambió y salió el
+                    sol. El capitán del navío se mantuvo siempre tranquilo porque sabía que los cambios climáticos no
+                    dependían de él.
+                </p>
+                <span>
+                    Lorem ipsum
+                </span>
+                <ul>
+                    <li><a id="buto" href="#" style="text-decoration: none">Link 1</a></li>
+                    <li><a href="#" style="text-decoration: none">Link 2</a></li>
+                    <li><a href="#" style="text-decoration: none">Link 3</a></li>
+                </ul>
+            </section>
+            <img class="imagen" src="edificio.jpg" alt="" id="imagen-A" />
         </div>
-      </div>
+    </div>
 
 
-      <div class="chat-bar-collapsible" id="BgContent">
+    <div class="chat-bar-collapsible" id="BgContent">
 
         <div class="speech-bubble" id="bubble"> ¿En qué te puedo ayudar?</div>
 
@@ -110,19 +108,19 @@
 
 
                         </div>
-                        
+
                         <button type="button" class="btn-funciones btn btn-outline-success" id="estadia"
-                        value="Proceso de estadía" onclick="estadia()">
-                        Estadía
-                    </button>
-                    <button type="button" class="btn-funciones btn btn-outline-success" id="estancia"
-                        value="Proceso de estancia" onclick="estancia()">
-                        Estancia
-                    </button>
-                    <button type="button" class="btn-funciones btn btn-outline-success" id="reinscripcion"
-                        value="Proceso de reinscripcion" onclick="reinscripcion()">
-                        Reinscripcion
-                    </button>
+                            value="Proceso de estadía" onclick="estadia()">
+                            Estadía
+                        </button>
+                        <button type="button" class="btn-funciones btn btn-outline-success" id="estancia"
+                            value="Proceso de estancia" onclick="estancia()">
+                            Estancia
+                        </button>
+                        <button type="button" class="btn-funciones btn btn-outline-success" id="reinscripcion"
+                            value="Proceso de reinscripcion" onclick="reinscripcion()">
+                            Reinscripcion
+                        </button>
                         <!-- User input box -->
                         <div class="chat-bar-input-block">
                             <div id="userInput">
@@ -145,7 +143,7 @@
 
 
     </div>
-    
+
 
 
     <script src="/Static/accesibilidad.js"></script>

@@ -34,6 +34,19 @@ function str_replace(haystack, needle, replacement) {
   return temp.join(replacement);
 }
 
+//Funcion para que el texto hable (Fase de pruebas)
+document.getElementById('btn-talk').addEventListener("click",()=>{
+  decir(texto_examp.innerHTML);
+});
+
+function decir(texto_examp){
+  speechSynthesis.speak(new SpeechSynthesisUtterance(texto_examp));
+}
+
+
+
+ 
+
 // Blanco y negro a toda la pagina completa
 function blancoNegro() {
   document.getElementsByTagName("html")[0].style.filter = "grayscale(100%)";
@@ -319,3 +332,8 @@ tippy('.btn-mas', {
   placement: 'right',
   hideOnClick: false
 });
+
+
+
+// txt = document.getElementById("texto_examp");
+// console.log(texto_examp.innerHTML);

@@ -24,7 +24,6 @@ $("#fontSizeMinus").click(function () {
 
   return false;
 });
-
 $("a.fontReset").click(function () {
   elm.css({ fontSize: reset });
 });
@@ -42,6 +41,18 @@ document.getElementById('btn-talk').addEventListener("click",()=>{
 function decir(texto_examp){
   speechSynthesis.speak(new SpeechSynthesisUtterance(texto_examp));
 }
+
+//Boton al ser presionado se quede en pause la grabacion
+function textPause(){
+  speechSynthesis.pause();
+  console.log("Funcionando")
+}
+
+document.getElementById('btn-pause').addEventListener('click',()=>{
+ 
+  textPause()
+
+})
 
 
 

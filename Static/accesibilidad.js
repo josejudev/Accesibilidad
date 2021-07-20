@@ -34,25 +34,24 @@ function str_replace(haystack, needle, replacement) {
 }
 
 //Funcion para que el texto hable (Fase de pruebas)
-document.getElementById('btn-talk').addEventListener("click",()=>{
-  decir(texto_examp.innerHTML);
-});
+txt = document.getElementsByTagName("p");
 
-function decir(texto_examp){
-  speechSynthesis.speak(new SpeechSynthesisUtterance(texto_examp));
+
+$("p").hover(function(){
+
+  decir(txt[1].innerHTML);
+  });
+
+
+
+function decir(){
+  speechSynthesis.speak(new SpeechSynthesisUtterance(txt[1].innerHTML));
 }
+
+
 
 //Boton al ser presionado se quede en pause la grabacion
-function textPause(){
-  speechSynthesis.pause();
-  console.log("Funcionando")
-}
 
-document.getElementById('btn-pause').addEventListener('click',()=>{
- 
-  textPause()
-
-})
 
 
 

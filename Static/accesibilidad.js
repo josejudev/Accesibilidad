@@ -33,20 +33,23 @@ function str_replace(haystack, needle, replacement) {
   return temp.join(replacement);
 }
 
-//Funcion para que el texto hable (Fase de pruebas)
-txt = document.getElementsByTagName("p");
+// Funcion para que el texto hable (Fase de pruebas)
+txt = document.getElementsByTagName('h5')
 
 
-$("p").hover(function(){
 
-  decir(txt[1].innerHTML);
+$(txt).hover(function(){
+
+    console.log(txt[0].innerHTML)
+    
   });
 
 
 
-function decir(){
-  speechSynthesis.speak(new SpeechSynthesisUtterance(txt[1].innerHTML));
-}
+
+// function decir(){
+//   speechSynthesis.speak(new SpeechSynthesisUtterance(txt[1].innerHTML));
+// }
 
 
 

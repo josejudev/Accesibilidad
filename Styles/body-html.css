@@ -1,15 +1,16 @@
 .card {
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    margin-top: 10%;
+  margin: 50px;
   }
+
+.master-card{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-right: 10px;
+  justify-content: center;
+}
   
-  .card-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   
   p {
     text-align: justify;

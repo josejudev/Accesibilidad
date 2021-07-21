@@ -1,7 +1,6 @@
 //Botones para agrandar y disminuir el tamaño de la fuente
 //Aumentar y disminuir texto
 
-
 let minimun = 16;
 let maximun = 20;
 let reset = $("p").css("fontSize");
@@ -33,32 +32,53 @@ function str_replace(haystack, needle, replacement) {
   return temp.join(replacement);
 }
 
-// Funcion para que el texto hable (Fase de pruebas)
-txt = document.getElementsByTagName('h5')
+//mostrar elementos en consola para posteriormente usarlos en el SpeechText
+txt_a = document.getElementById("xxx");
+txt_b = document.getElementById("yyy");
+txt_c = document.getElementById("zzz");
 
+function show_console() {
+  if (txt_a) {
+    $(txt_a).hover(
+      function () {
+        console.log(txt_a.innerHTML);
+      },
+      function () {
+        console.log();
+      }
+    );
+  }
 
+  if (txt_b) {
+    $(txt_b).hover(
+      function () {
+        console.log(txt_b.innerHTML);
+      },
+      function () {
+        console.log();
+      }
+    );
+  }
 
-$(txt).hover(function(){
+  if (txt_c) {
+    $(txt_c).hover(
+      function () {
+        console.log(txt_c.innerHTML);
+      },
+      function () {
+        console.log();
+      }
+    );
+  }
+}
 
-    console.log(txt[0].innerHTML)
-    
-  });
-
-
-
+show_console();
 
 // function decir(){
 //   speechSynthesis.speak(new SpeechSynthesisUtterance(txt[1].innerHTML));
 // }
 
-
-
 //Boton al ser presionado se quede en pause la grabacion
-
-
-
-
- 
 
 // Blanco y negro a toda la pagina completa
 function blancoNegro() {
@@ -101,7 +121,6 @@ function contrast() {
   $(".detail-event").css("color", "white");
   $(".icon-event").css("color", "white");
   $(".widget").css("background", "#0D1117");
-
 
   document.body.style.backgroundColor = "#0D1117";
   for (let i = 0; i < high_contrast.length; i++) {
@@ -294,59 +313,55 @@ document.getElementById("btn-reload").addEventListener("click", (e) => {
   localStorage.clear();
 });
 
-
-
-tippy('#fontSizePlus', {
-  content: 'Aumentar Texto',
+tippy("#fontSizePlus", {
+  content: "Aumentar Texto",
   followCursor: true,
-  placement: 'right',
-  hideOnClick: false
+  placement: "right",
+  hideOnClick: false,
 });
-tippy('#fontSizeMinus', {
-  content: 'Disminuir Texto',
+tippy("#fontSizeMinus", {
+  content: "Disminuir Texto",
   followCursor: true,
-  placement: 'right',
-  hideOnClick: false
+  placement: "right",
+  hideOnClick: false,
 });
-tippy('.fa-underline', {
-  content: 'Subrayar Links',
+tippy(".fa-underline", {
+  content: "Subrayar Links",
   followCursor: true,
-  placement: 'right',
-  hideOnClick: false
+  placement: "right",
+  hideOnClick: false,
 });
-tippy('.fa-bol', {
-  content: 'Letras En Negritas',
+tippy(".fa-bol", {
+  content: "Letras En Negritas",
   followCursor: true,
-  placement: 'right',
-  hideOnClick: false
+  placement: "right",
+  hideOnClick: false,
 });
-tippy('.fa-adjust', {
-  content: 'Modo Alto Contraste',
+tippy(".fa-adjust", {
+  content: "Modo Alto Contraste",
   followCursor: true,
-  placement: 'right',
+  placement: "right",
   hideOnClick: false,
   zIndex: 9999,
 });
-tippy('.fa-tint', {
-  content: 'Modo Blanco y Negro',
+tippy(".fa-tint", {
+  content: "Modo Blanco y Negro",
   followCursor: true,
-  placement: 'right',
-  hideOnClick: false
+  placement: "right",
+  hideOnClick: false,
 });
-tippy('#btn-reload', {
-  content: 'Deshacer',
+tippy("#btn-reload", {
+  content: "Deshacer",
   followCursor: true,
-  placement: 'right',
-  hideOnClick: false
+  placement: "right",
+  hideOnClick: false,
 });
-tippy('.btn-mas', {
-  content: 'Accesibilidad',
+tippy(".btn-mas", {
+  content: "Accesibilidad",
   followCursor: true,
-  placement: 'right',
-  hideOnClick: false
+  placement: "right",
+  hideOnClick: false,
 });
-
-
 
 // txt = document.getElementById("texto_examp");
 // console.log(texto_examp.innerHTML);

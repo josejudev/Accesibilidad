@@ -74,3 +74,16 @@
   font-size: 40px;
 }
 
+.badge{
+  margin-left: 1px;
+  margin-right: 10px;
+  font-size:14px;
+
+}
+
+.badge:hover{
+  color:yellow;
+  cursor: pointer;
+
+}
+

@@ -74,16 +74,12 @@
   font-size: 40px;
 }
 
-.badge{
-  margin-left: 1px;
-  margin-right: 10px;
-  font-size:14px;
 
-}
+.form-select{
 
-.badge:hover{
-  color:yellow;
-  cursor: pointer;
-
+  margin-top: 30px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 

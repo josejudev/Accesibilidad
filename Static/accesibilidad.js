@@ -32,53 +32,6 @@ function str_replace(haystack, needle, replacement) {
   return temp.join(replacement);
 }
 
-//mostrar elementos en consola para posteriormente usarlos en el SpeechText
-txt_a = document.getElementById("xxx");
-txt_b = document.getElementById("yyy");
-txt_c = document.getElementById("zzz");
-
-function show_console() {
-  if (txt_a) {
-    $(txt_a).hover(
-      function () {
-        console.log(txt_a.innerHTML);
-      },
-      function () {
-        console.log();
-      }
-    );
-  }
-
-  if (txt_b) {
-    $(txt_b).hover(
-      function () {
-        console.log(txt_b.innerHTML);
-      },
-      function () {
-        console.log();
-      }
-    );
-  }
-
-  if (txt_c) {
-    $(txt_c).hover(
-      function () {
-        console.log(txt_c.innerHTML);
-      },
-      function () {
-        console.log();
-      }
-    );
-  }
-}
-
-show_console();
-
-// function decir(){
-//   speechSynthesis.speak(new SpeechSynthesisUtterance(txt[1].innerHTML));
-// }
-
-//Boton al ser presionado se quede en pause la grabacion
 
 // Blanco y negro a toda la pagina completa
 function blancoNegro() {
@@ -362,6 +315,14 @@ tippy(".btn-mas", {
   placement: "right",
   hideOnClick: false,
 });
+tippy(".fa-assistive-listening-systems", {
+  content: "Tallback",
+  followCursor: true,
+  placement: "right",
+  hideOnClick: false,
+});
+
+
 
 // txt = document.getElementById("texto_examp");
 // console.log(texto_examp.innerHTML);

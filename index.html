@@ -13,16 +13,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
     <title>Accesibilidad</title>
 </head>
 
 <body>
+    <select  class="form-select" id="voiceSelect"></select>
 
-
+    
 
     <!-- block accesibilidad -->
     
-
+    
     <div class="container-accesibilidad">
         <input type="checkbox" id="btn-mas"/>
         <div class="btn-mas">
@@ -31,66 +33,70 @@
         <div class="botones-accesibilidad">
             <i class="fa fa-search-plus" id="fontSizePlus"></i>
             <i class="fa fa-search-minus" id="fontSizeMinus"></i>
-            <i class="fa fa-assistive-listening-systems" id="btn-talk" value="Decir"></i>
-            <i class="fa fa-pause-circle" id="btn-pause"></i>
+
+
+            <input id="btn-talk" type="checkbox"><label for="btn-talk"
+            class="fa fa-assistive-listening-systems"></label></input>
+
             <input id="btn-resalt" type="checkbox" onclick="changeStatus_2()"><label for="btn-resalt"
-                class="fa fa-underline"></label></input>
+            class="fa fa-underline"></label></input>
             <input id="btn-legible" type="checkbox" onclick="changeStatus_4()"><label id="letraN" for="btn-legible"
-                class="fa fa-bol">N</label></input>
+            class="fa fa-bol">N</label></input>
             <input id="btn-contra" type="checkbox" onclick="changeStatus_3()"><label for="btn-contra"
-                class="fa fa-adjust"></label></input>
+            class="fa fa-adjust"></label></input>
             <input id="btn-byno" type="checkbox" onclick="changeStatus()"><label for="btn-byno"
-                class="fa fa-tint"></label></input>
+            class="fa fa-tint"></label></input>
             <i class="fa fa-undo" id="btn-reload"></i>
         </div>
     </div>
     <script>
         // With the above scripts loaded, you can call `tippy()` with a CSS
         // selector and a `content` prop:
-
-    </script>
+        
+        </script>
     <!-- end accesibilidad -->
-
-
+    
+    
 
     <div class="master-card">
 
         <div class="card border-primary mb-3" style="max-width: 18rem;" >
             
-            <div class="card-header" ><a class="badge bg-primary"><i class="fas fa-assistive-listening-systems"></i> Escuchar</a>Titulo 1</div>
+            <div class="card-header" >Titulo 1</div>
             <div class="card-body text-primary">
-                <h5 class="card-title-b" id="xxx">Primero</h5>
+                <h5 class="card-title-b" >Primero</h5>
               <p class="card-text">Texto de ejemplo para hacer relleno</p>
             </div>
-          </div>
-    
+        </div>
+        
+        <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Titulo 2</div>
+            <div class="card-body text-primary">
+                <h5 class="card-title-b">Segundo</h5>
+              <p class="card-text">Texto de ejemplo para hacer relleno</p>
+            </div>
+        </div>
+        
           <div class="card border-primary mb-3" style="max-width: 18rem;">
-            <div class="card-header"><a class="badge bg-primary"><i class="fas fa-assistive-listening-systems"></i> Escuchar</a>Titulo 2</div>
+            <div class="card-header">Titulo 3</div>
             <div class="card-body text-primary">
-              <h5 class="card-title-b" id="yyy">Segundo</h5>
-              <p class="card-text">Texto de ejemplo para hacer relleno</p>
+                    <h5 class="card-title-b" >Tercero</h5>
+                    <p class="card-text">Texto de ejemplo para hacer relleno</p>
+                    
             </div>
-          </div>
-    
-          <div class="card border-primary mb-3" style="max-width: 18rem;">
-            <div class="card-header"><a class="badge bg-primary"><i class="fas fa-assistive-listening-systems"></i> Escuchar</a>Titulo 3</div>
-            <div class="card-body text-primary">
-              <h5 class="card-title-b" id="zzz">Tercero</h5>
-              <p class="card-text">Texto de ejemplo para hacer relleno</p>
-            </div>
-          </div>
+        </div>
     </div>
+    
 
-
-
+    
     <div class="chat-bar-collapsible" id="BgContent">
-
+        
         <div class="speech-bubble" id="bubble"> ¿En qué te puedo ayudar?</div>
-
+        
         <button id="chat-button" type="button" class="collapsible_down">
             <i id="chat-icon"> <img src="https://img.icons8.com/cotton/64/000000/chat.png" width="35px" /></i>
             <b id="oculAsis">WENDY</b>
-
+            
         </button>
         <div class="content_chat">
             <div class="full-chat-block">
@@ -103,18 +109,18 @@
                             <h5 id="chat-timestamp"></h5>
                             <p id="botStarterMessage" class="botText">
                                 <span>Loading...</span>
-
+                                
                             </p>
-
-
+                            
+                            
                         </div>
-
+                        
                         <button type="button" class="btn-funciones btn btn-outline-success" id="estadia"
-                            value="Proceso de estadía" onclick="estadia()">
+                        value="Proceso de estadía" onclick="estadia()">
                             Estadía
                         </button>
                         <button type="button" class="btn-funciones btn btn-outline-success" id="estancia"
-                            value="Proceso de estancia" onclick="estancia()">
+                        value="Proceso de estancia" onclick="estancia()">
                             Estancia
                         </button>
                         <button type="button" class="btn-funciones btn btn-outline-success" id="reinscripcion"
@@ -125,8 +131,8 @@
                         <div class="chat-bar-input-block">
                             <div id="userInput">
                                 <input id="textInput" class="input-box" type="text" name="msg"
-                                    onkeyup="this.value = this.value.toLowerCase();"
-                                    placeholder="Presiona 'Enter' para enviar" />
+                                onkeyup="this.value = this.value.toLowerCase();"
+                                placeholder="Presiona 'Enter' para enviar" />
 
                             </div>
                             <div class="chat-bar-icons">
@@ -138,18 +144,22 @@
                     </div>
                 </div>
             </div>
-
+            
         </div>
 
-
+        
     </div>
 
 
 
+
+    
     <script src="/Static/accesibilidad.js"></script>
     <script src="/Static/chat-bot.js"></script>
+    <script src="/Static/talkback.js"></script>
 
 
 </body>
+
 
 </html>

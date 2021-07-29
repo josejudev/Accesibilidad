@@ -9,7 +9,7 @@
       return;
   
     // Some config stuffs... 
-    var voiceSelect = document.getElementById("voiceSelect");
+    var voiceSelect = document.getElementById("voice");
     var myPhrase = 'Talback activado';
     var voices = [];
     
@@ -33,15 +33,12 @@
     function populateVoiceList() {
       voices = speechSynthesis.getVoices();
       for (var i = 0; i < voices.length; i++) {
-      var option = document.createElement('option');
-       option.textContent += voices[i].default;
-       document.getElementById("voiceSelect").appendChild(option);
        }
      }
     // This is the handler for when the select tag is changed. 
     function handler() {
       var utterThis = new SpeechSynthesisUtterance(myPhrase);
-      var selectedOption = voiceSelect.selectedOptions[0];
+      var selectedOption = arguments;
   
       for (var i = 0; i < voices.length; i++) {
         if (voices[i].name === selectedOption) {
@@ -75,7 +72,7 @@
     function start() {
       populateVoiceList();
       if (speechSynthesis.onvoiceschanged !== undefined)
-        speechSynthesis.onvoiceschanged = populateVoiceList;
+        
 
       voiceSelect.onchange = handler;
       setTimeout(handler, 75);

@@ -6,39 +6,49 @@ var contentBig = document.getElementsByClassName("chat-bar-collapsible ");
 // Ocultar y mostrar elementos
 document.getElementById("oculAsis").style.display = "none";
 
-setTimeout(function () { document.getElementById("bubble").style.display = "none"; }, 10000)
-
 // Comportamiento de la ventana al momento de abrir y cerrar
 $(document).ready(function () {
   if (element.clientWidth < 100) {
     $(contentBig).css("box-shadow", "none");
   }
 });
+
 for (let i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function () {
     var content = this.nextElementSibling;
 
+    // Cuando la ventana está cerrada
     if (content.style.maxHeight) {
-      // Cuando la ventana esta cerrada
       content.style.maxHeight = null;
       element.className = "collapsible_down";
       $(contentBig).css("box-shadow", "none");
       document.getElementById("oculAsis").style.display = "none";
-      document.getElementById("bubble").style.display = "none";
       document.getElementById("chat-icon").style.display = "block";
 
+      // Cuando la ventana está abierta
     } else {
-      // Cuando la ventana esta abierta
-
       content.style.maxHeight = content.scrollHeight + "px";
       element.className = "collapsible_up";
       $(contentBig).css("box-shadow", "0 8px 16px 0 rgba(0, 0, 0, 0.2)");
       document.getElementById("oculAsis").style.display = "block";
-      document.getElementById("bubble").style.display = "none";
       document.getElementById("chat-icon").style.display = "none";
     }
+
+    $(document).on("click",function(e) {
+                    
+      var container = $("#BgContent");
+                         
+         if (!container.is(e.target) && container.has(e.target).length === 0) { 
+          content.style.maxHeight = null;
+          element.className = "collapsible_down";
+          $(contentBig).css("box-shadow", "none");
+          document.getElementById("oculAsis").style.display = "none";
+          document.getElementById("chat-icon").style.display = "block";      
+         }
+  });
   });
 }
+
 
 //Obtener el tiempo y plasmarlo
 function getTime() {
@@ -63,7 +73,9 @@ function firstBotMessage() {
   let firstMessage =
     "Bienvenido, soy la asistente virtual <b> Wendy </b>  <br>A continuacion puede seleccionar una respuesta o escribirla ";
   document.getElementById("botStarterMessage").innerHTML =
-    '<p class="botText" id = "initialMessage"><span>' + firstMessage + "</span></p>";
+    '<p class="botText" id = "initialMessage"><span>' +
+    firstMessage +
+    "</span></p>";
 
   let time = getTime();
   $("#chat-timestamp").append(time);
@@ -127,7 +139,6 @@ function estadia() {
   setTimeout(() => {
     getHardResponse(userText);
   }, 1000);
-
 }
 
 function estancia() {
@@ -196,10 +207,12 @@ function getBotResponse(input) {
     input == "estancia" ||
     input == "estancias"
   ) {
-    return "Para iniciar el trámite el alumno debe: <br> Realizar el registro y subir los siguientes documentos al sistema SIGA" +
+    return (
+      "Para iniciar el trámite el alumno debe: <br> Realizar el registro y subir los siguientes documentos al sistema SIGA" +
       `<a href="#">(AQUÍ)</a>` +
       " <br> 1.-Documento de Solicitud de Estancia <br> 2.-Carta de Exclusión de Responsabilidad Covid, para la realización de Estadía <br> 3.-Identificación con fotografía del padre y/o tutor legal <br> 4.-Constancia de vigencia del IMSS. <br> 5.-Carta de Exclusión de Responsabilidad (DVEU-RG.16) o carta de exclusión de responsabilidad  (DVEU-RG.17) si el alumno es su propio tutor. Con los soportes de identificación con fotografía del tutor legal." +
-      `<a href="#">Presiona aquí para mas informacion</a>`;
+      `<a href="#">Presiona aquí para mas informacion</a>`
+    );
   }
   if (
     input == "Proceso de reinscripcion" ||

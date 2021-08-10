@@ -79,7 +79,7 @@
 }
 
 .outer-container {
-  min-height: 500px;
+  height: 500px;
   bottom: 0%;
   position: relative;
 }
@@ -205,6 +205,8 @@
   .full-chat-block {
     width: 100%;
     border-radius: 0px;
+    height: 400px;
+
   }
 
   .chat-bar-collapsible {
@@ -220,45 +222,19 @@
     border-top: 3px solid white;
     border-radius: 0px;
   }
+
+  .collapsible_down{
+    width: 60px;
+    height: 60px;
+    margin-left: 82%;
+  }
+
+
 }
 
-.speech-bubble {
-  position: fixed;
-  right: 10px;
-  bottom: 80px;
-  background: #6495ed;
-  /* el color de fondo */
-  color: #fff;
-  /* el color del texto */
-  font-family: Arial, Sans-serif;
-  font-size: 12px;
-  padding: 20px 10px 10px 10px;
-  text-align: center;
-  width: 200px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  margin: auto;
-  margin-bottom: auto;
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
 
-.speech-bubble:after {
-  border: solid 10px transparent;
-  border-top-color: #6495ed;
-  /* igual al color de fondo */
-  border-bottom: 0;
-  bottom: -20px;
-  /* igual al borde + el padding-bottom de la definición anterior */
-  content: "";
-  display: block;
-  height: 10;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 0;
-}
+
+
 
 @-webkit-keyframes slide-top {
   0% {

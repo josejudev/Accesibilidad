@@ -1,10 +1,5 @@
-
-
-
-
-  document.getElementById("btn-talk").addEventListener("click",function(e){
-
-
+ //! Archivo de chulo
+ document.getElementById("btn-talk").addEventListener("click",function(e){
 
     if (document.getElementById('btn-talk').checked){
         // A simple IIFE function. 
@@ -15,7 +10,7 @@
       return;
   
     // Some config stuffs... 
-    var voiceSelect = document.getElementById("voiceSelect");
+    var voiceSelect = document.getElementById("voice");
     var myPhrase = 'Talback activado';
     var voices = [];
     
@@ -38,31 +33,21 @@
     // This is a function to display all possible voice options. 
     function populateVoiceList() {
       voices = speechSynthesis.getVoices();
-  
       for (var i = 0; i < voices.length; i++) {
-        var option = document.createElement('option');
-        option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
-        option.textContent += voices[i].default ? ' -- DEFAULT' : '';
-        option.setAttribute('data-lang', voices[i].lang);
-        option.setAttribute('data-name', voices[i].name);
-        document.getElementById("voiceSelect").appendChild(option);
-      }
-    }
-  
+       }
+     }
     // This is the handler for when the select tag is changed. 
     function handler() {
       var utterThis = new SpeechSynthesisUtterance(myPhrase);
-      var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+      var selectedOption = arguments;
   
       for (var i = 0; i < voices.length; i++) {
         if (voices[i].name === selectedOption) {
           utterThis.voice = voices[i];
         }
       }
-  
       speechSynthesis.speak(utterThis);
     };
-  
     // This is your code to get the selected text.
     function getSelectionText() {
       var text = "";
@@ -88,8 +73,8 @@
     function start() {
       populateVoiceList();
       if (speechSynthesis.onvoiceschanged !== undefined)
-        speechSynthesis.onvoiceschanged = populateVoiceList;
-  
+        
+
       voiceSelect.onchange = handler;
       setTimeout(handler, 75);
     }

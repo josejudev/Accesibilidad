@@ -316,7 +316,7 @@ tippy(".btn-mas", {
   hideOnClick: false,
 });
 tippy(".fa-assistive-listening-systems", {
-  content: "Tallback",
+  content: "Texto a voz",
   followCursor: true,
   placement: "right",
   hideOnClick: false,
